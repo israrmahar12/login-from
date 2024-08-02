@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="box" style="margin-right: 60px;">
+    <form onsubmit="signup(event)">
+      <h1>
+        sigin
+      </h1>
+      <input type="text" placeholder="enter your email" id="email">
+      <input type="password" placeholder="password" id="password">
+      <button type="submit">submit</button>
+    </form>
+  </div>
+  <div>
+    <form onsubmit="login(event)">
+      <h1>
+        login
+      </h1>
+      <input type="text" placeholder="enter your email" id="login_email">
+      <input type="password" placeholder="password" id="login_password">
+      <button type="submit">login</button>
+      <button onclick="logout()">logout</button>
+      <div class="wellcome-box">
+        <h4>wellcome-box</h4>
+      </div>
+      <div class="center">
+        <h4>your account details</h4>
+        <img src="360_F_499933117_ZAUBfv3P1HEOsZDrnkbNCt4jc3AodArl.jpg" height="auto" class="propic" width="30%" alt="no-img">
+        <input type="file" accept="image/*" onchange="uploadimg(event)">
+      </div>
+      <div class="userdetails">
+        <!-- <h4>login</h4> -->
+      </div>
+    </form>
+  </div>
+  <div id="model" style="margin-left: 60px;">
+    <form action="" id="editsprofile" onsubmit="userupdate(event)">
+      <h1>userdetails</h1>
+      <input type="text" name="name" placeholder="name">
+      <input type="text" name="profileEmail" placeholder="email">
+      <input type="text" name="phone" placeholder="phone">
+      <input type="text" name="specialty" placeholder="specialty">
+      <input type="text" name="portfolioURL" placeholder="portfolioURL">
+      <input type="text" name="experience" placeholder="experience">
+      <button>added</button>
+    </form>
+
+  </div>
+  <script src="app.js" defer></script>
+  <script src="firestore.js"></script>
+
+
+   <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src= "https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script> 
+    <script src= "https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+    </script>
+    <script>
+          const firebaseConfig = {
+    apiKey: "AIzaSyDyBsUZxP0Bi6FBe17DJxq0m3A67KVZIMU",
+    authDomain: "project-signup-login.firebaseapp.com",
+    projectId: "project-signup-login",
+    storageBucket: "project-signup-login.appspot.com",
+    messagingSenderId: "819900878616",
+    appId: "1:819900878616:web:8ac47d117073ef526d186d",
+    measurementId: "G-KN762X5VKV"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+</script>
+</body>
+
+</html>
